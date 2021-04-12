@@ -13,15 +13,17 @@ ReactDOM.render(
     domain='dev-pu8wyk-g.us.auth0.com'
     clientId='7vHgXJ01aWGyMVLWdZUwQSUapigdjfKu'
     redirectUri={window.location.origin}
-    cacheLocation='localStorage'
+    cacheLocation='localstorage'
   >
-    <ProductsProvider>
-      <FilterProvider>
-        <CartProvider>
-          <App />
-        </CartProvider>
-      </FilterProvider>
-    </ProductsProvider>
+    <UserProvider>
+      <ProductsProvider>
+        <FilterProvider>
+          <CartProvider>
+            <App />
+          </CartProvider>
+        </FilterProvider>
+      </ProductsProvider>
+    </UserProvider>
   </Auth0Provider>,
   document.getElementById('root')
 );
